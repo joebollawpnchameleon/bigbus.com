@@ -6,6 +6,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using BigBus.DataServices.Repositories.Infrastructure;
 using BigBus.DataServices;
+using BigBus.DataServices.DataModel;
 
 namespace BigBus.DataServices.Repositories.Implementation
 {
@@ -14,7 +15,7 @@ namespace BigBus.DataServices.Repositories.Implementation
         public virtual IList<T> GetAll(params Expression<Func<T, object>>[] navigationProperties)
         {
             List<T> list;
-            using (var context = new BigBusEntities())
+            using (var context = new BigBusDataModelContext())
             {
                 IQueryable<T> dbQuery = context.Set<T>();
 
@@ -33,7 +34,7 @@ namespace BigBus.DataServices.Repositories.Implementation
              params Expression<Func<T, object>>[] navigationProperties)
         {
             List<T> list;
-            using (var context = new BigBusEntities())
+            using (var context = new BigBusDataModelContext())
             {
                 IQueryable<T> dbQuery = context.Set<T>();
 
@@ -53,7 +54,7 @@ namespace BigBus.DataServices.Repositories.Implementation
              params Expression<Func<T, object>>[] navigationProperties)
         {
             T item = null;
-            using (var context = new BigBusEntities())
+            using (var context = new BigBusDataModelContext())
             {
                 IQueryable<T> dbQuery = context.Set<T>();
 
@@ -70,7 +71,7 @@ namespace BigBus.DataServices.Repositories.Implementation
 
         public virtual void Add(params T[] items)
         {
-            using (var context = new BigBusEntities())
+            using (var context = new BigBusDataModelContext())
             {
                 foreach (T item in items)
                 {
@@ -82,7 +83,7 @@ namespace BigBus.DataServices.Repositories.Implementation
 
         public virtual void Update(params T[] items)
         {
-            using (var context = new BigBusEntities())
+            using (var context = new BigBusDataModelContext())
             {
                 foreach (T item in items)
                 {
@@ -94,7 +95,7 @@ namespace BigBus.DataServices.Repositories.Implementation
  
         public virtual void Remove(params T[] items)
         {
-            using (var context = new BigBusEntities())
+            using (var context = new BigBusDataModelContext())
             {
                 foreach (T item in items)
                 {
