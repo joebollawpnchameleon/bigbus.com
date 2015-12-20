@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="dcc4a546b7614816afdd49755dee428b" Name="Diagram1">
+        <EntityTypeShape EntityType="BigBusModel.tb_AccountManager" Width="1.5" PointX="11.75" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_AccountManager_MicroSite" Width="1.5" PointX="14" PointY="17.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_AdminLog" Width="1.5" PointX="11.75" PointY="20.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_AdminSession" Width="1.5" PointX="13.75" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_AdminUser" Width="1.5" PointX="20.75" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_AgentCashSale" Width="1.5" PointX="20.75" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_AgentCommission" Width="1.5" PointX="18.5" PointY="22.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_AgentOrder" Width="1.5" PointX="20.75" PointY="15.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_AgentOrderError" Width="1.5" PointX="20.75" PointY="24.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_AgentProfile" Width="1.5" PointX="14" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_Barcode" Width="1.5" PointX="3.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_Basket" Width="1.5" PointX="18.75" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_Basket_Promotion" Width="1.5" PointX="21" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_BasketLine" Width="1.5" PointX="22.75" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_Company" Width="1.5" PointX="18.5" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_ContactData" Width="1.5" PointX="22.75" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_Country" Width="1.5" PointX="0.75" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_Currency" Width="1.5" PointX="16.25" PointY="22.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_CustomPage" Width="1.5" PointX="22.75" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_CustomPage_Language" Width="1.5" PointX="22.75" PointY="19.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_Download" Width="1.5" PointX="22.75" PointY="23.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_DownloadFolder" Width="1.5" PointX="23.75" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_DownloadMetaData" Width="1.5" PointX="13.75" PointY="26.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_Email" Width="1.5" PointX="15.75" PointY="26.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_ExternalOrder_Barcode" Width="1.5" PointX="17.75" PointY="26.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_GalleryImage" Width="1.5" PointX="22.75" PointY="26.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_GoogleCode" Width="1.5" PointX="24.75" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_GroupBooking" Width="1.5" PointX="6.75" PointY="21.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_GroupBooking_Stop" Width="1.5" PointX="9" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_GroupBooking_Time" Width="1.5" PointX="9" PointY="36.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_HomePageData" Width="1.5" PointX="24.75" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_HTMLMetaTag" Width="1.5" PointX="24.75" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_Image" Width="1.5" PointX="11" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_ImageFolder" Width="1.5" PointX="8.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_ImageMetaData" Width="1.5" PointX="8.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_Language" Width="1.5" PointX="0.75" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_Log" Width="1.5" PointX="24.75" PointY="17.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_MicroSite" Width="1.5" PointX="1.5" PointY="20.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_MicroSite_Language" Width="1.5" PointX="3" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_MultiTicket_Promotion" Width="1.5" PointX="24.75" PointY="20.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_Navigation" Width="1.5" PointX="1.5" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_NavigationItem" Width="1.5" PointX="0.75" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_NavigationItem_Language" Width="1.5" PointX="3" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_NewsItem" Width="1.5" PointX="24.75" PointY="24.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_Newsletter" Width="1.5" PointX="5.75" PointY="28.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_NewsletterComposite" Width="1.5" PointX="19.75" PointY="28.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_NewsletterStaticSection" Width="1.5" PointX="24.75" PointY="28.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_NewsletterText" Width="1.5" PointX="25.75" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_NewsletterText_Language" Width="1.5" PointX="16.75" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_Order" Width="1.5" PointX="8.75" PointY="22" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_Orderline" Width="1.5" PointX="11" PointY="25.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_OrderLine_GeneratedBarcode" Width="1.5" PointX="26.75" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_PasswordAdminResetRequest" Width="1.5" PointX="26.75" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_PasswordResetRequest" Width="1.5" PointX="26.75" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_PaymentTransaction" Width="1.5" PointX="26.75" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_Phrase" Width="1.5" PointX="0.75" PointY="18" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_Phrase_Language" Width="1.5" PointX="3" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_PlaceOfInterest" Width="1.5" PointX="3.75" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_PlaceOfInterest_Language" Width="1.5" PointX="6" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_PlaceOfInterest_Stop" Width="1.5" PointX="14" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_Promotion" Width="1.5" PointX="18.75" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_Promotion_DiscountedTicket" Width="1.5" PointX="26.75" PointY="22.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_Route" Width="1.5" PointX="3.75" PointY="28.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_Route_Language" Width="1.5" PointX="6" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_Route_Stop" Width="1.5" PointX="9" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_Session" Width="1.5" PointX="21.75" PointY="29.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_SiteText" Width="1.5" PointX="3.75" PointY="20" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_SiteText_Language" Width="1.5" PointX="6" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_Stop" Width="1.5" PointX="6.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_Stop_Language" Width="1.5" PointX="9" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_Tag" Width="1.5" PointX="5.75" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_ThingsToDoItem" Width="1.5" PointX="26.75" PointY="26.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_Ticket" Width="1.5" PointX="1.5" PointY="29.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_Ticket_ExclusionDate" Width="1.5" PointX="27.75" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_Ticket_ExclusionWeekday" Width="1.5" PointX="3.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_Ticket_Language" Width="1.5" PointX="26.75" PointY="30.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_TicketApi" Width="1.5" PointX="28.75" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_TicketCombination" Width="1.5" PointX="28.75" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_TicketCost" Width="1.5" PointX="3.75" PointY="32.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_TicketCostVariation" Width="1.5" PointX="3.75" PointY="38" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_TourAnimationContent" Width="1.5" PointX="28.75" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_Transaction_Address" Width="1.5" PointX="28.75" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_Transaction_AddressPaypal" Width="1.5" PointX="13.75" PointY="31.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_URLRewrite" Width="1.5" PointX="15.75" PointY="31.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_User" Width="1.5" PointX="16.25" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigBusModel.tb_DiallingCode" Width="1.5" PointX="13.75" PointY="20.25" IsExpanded="true" />
+        <AssociationConnector Association="BigBusModel.FK_tb_AccountManager_MicroSite_tb_AccountManager" ManuallyRouted="false" />
+        <AssociationConnector Association="BigBusModel.FK_tb_AgentProfile_tb_AccountManager" ManuallyRouted="false" />
+        <AssociationConnector Association="BigBusModel.FK_tb_AgentProfile_tb_AccountManager1" ManuallyRouted="false" />
+        <AssociationConnector Association="BigBusModel.FK_tb_AgentProfile_tb_AccountManager2" ManuallyRouted="false" />
+        <AssociationConnector Association="BigBusModel.FK_tb_AccountManager_MicroSite_tb_AccountManager_MicroSite" ManuallyRouted="false" />
+        <AssociationConnector Association="BigBusModel.FK_tb_AgentCommission_tb_AgentUser" ManuallyRouted="false" />
+        <AssociationConnector Association="BigBusModel.FK_tb_AgentCommission_tb_Currency" ManuallyRouted="false" />
+        <AssociationConnector Association="BigBusModel.FK_tb_AgentCommission_tb_Ticket" ManuallyRouted="false" />
+        <AssociationConnector Association="BigBusModel.FK_tb_User_tb_AgentProfile" ManuallyRouted="false" />
+        <AssociationConnector Association="BigBusModel.FK_tb_Barcodes_tb_MicroSite" ManuallyRouted="false" />
+        <AssociationConnector Association="BigBusModel.FK_tb_Basket_Promotion_tb_Basket" ManuallyRouted="false" />
+        <AssociationConnector Association="BigBusModel.FK_tb_Basket_Promotion_tb_Promotion" ManuallyRouted="false" />
+        <AssociationConnector Association="BigBusModel.FK_tb_Company_tb_User" ManuallyRouted="false" />
+        <AssociationConnector Association="BigBusModel.FK_tb_GroupBooking_Stop_tb_GroupBooking" ManuallyRouted="false" />
+        <AssociationConnector Association="BigBusModel.FK_tb_GroupBooking_Time_tb_GroupBooking" ManuallyRouted="false" />
+        <AssociationConnector Association="BigBusModel.FK_tb_GroupBooking_Stop_tb_Stop" ManuallyRouted="false" />
+        <AssociationConnector Association="BigBusModel.FK_tb_Image_tb_ImageFolder" ManuallyRouted="false" />
+        <AssociationConnector Association="BigBusModel.FK_tb_Image_tb_ImageMetadata" ManuallyRouted="false" />
+        <AssociationConnector Association="BigBusModel.FK_tb_ImageFolder_tb_ImageFolder" ManuallyRouted="false" />
+        <AssociationConnector Association="BigBusModel.FK_tb_MicroSite_Language_tb_Language1" ManuallyRouted="false" />
+        <AssociationConnector Association="BigBusModel.FK_tb_NavigationItem_Language_tb_Language" ManuallyRouted="false" />
+        <AssociationConnector Association="BigBusModel.FK_tb_Phrase_Language_tb_Language" ManuallyRouted="false" />
+        <AssociationConnector Association="BigBusModel.FK_tb_PlaceOfInterest_Language_tb_Language" ManuallyRouted="false" />
+        <AssociationConnector Association="BigBusModel.FK_tb_Route_Language_tb_Language" ManuallyRouted="false" />
+        <AssociationConnector Association="BigBusModel.FK_tb_SiteText_Language_tb_Language" ManuallyRouted="false" />
+        <AssociationConnector Association="BigBusModel.FK_tb_Stop_Language_tb_Language" ManuallyRouted="false" />
+        <AssociationConnector Association="BigBusModel.FK_tb_MicroSite_Language_tb_MicroSite1" ManuallyRouted="false" />
+        <AssociationConnector Association="BigBusModel.FK_tb_Navigation_tb_MicroSite" ManuallyRouted="false" />
+        <AssociationConnector Association="BigBusModel.FK_tb_Route_tb_MicroSite" ManuallyRouted="false" />
+        <AssociationConnector Association="BigBusModel.FK_tb_NavigationItem_tb_Navigation" ManuallyRouted="false" />
+        <AssociationConnector Association="BigBusModel.FK_tb_NavigationItem_Language_tb_NavigationItem" ManuallyRouted="false" />
+        <AssociationConnector Association="BigBusModel.FK_tb_NewsletterText_Language_tb_NewsletterText_Language" ManuallyRouted="false" />
+        <AssociationConnector Association="BigBusModel.FK_tb_Orderline_tb_Order" ManuallyRouted="false" />
+        <AssociationConnector Association="BigBusModel.FK_tb_Phrase_Language_tb_Phrase" ManuallyRouted="false" />
+        <AssociationConnector Association="BigBusModel.FK_tb_PlaceOfInterest_Language_tb_PlaceOfInterest" ManuallyRouted="false" />
+        <AssociationConnector Association="BigBusModel.FK_tb_PlaceOfInterest_Stop_tb_PlaceOfInterest" ManuallyRouted="false" />
+        <AssociationConnector Association="BigBusModel.FK_tb_PlaceOfInterest_tb_Ticket" ManuallyRouted="false" />
+        <AssociationConnector Association="BigBusModel.FK_tb_PlaceOfInterest_Stop_tb_Stop" ManuallyRouted="false" />
+        <AssociationConnector Association="BigBusModel.FK_tb_Route_Language_tb_Route" ManuallyRouted="false" />
+        <AssociationConnector Association="BigBusModel.FK_tb_Route_Stop_tb_Route" ManuallyRouted="false" />
+        <AssociationConnector Association="BigBusModel.FK_tb_Route_tb_Ticket" ManuallyRouted="false" />
+        <AssociationConnector Association="BigBusModel.FK_tb_Route_Stop_tb_Stop" ManuallyRouted="false" />
+        <AssociationConnector Association="BigBusModel.FK_tb_SiteText_Language_tb_SiteText1" ManuallyRouted="false" />
+        <AssociationConnector Association="BigBusModel.FK_tb_Stop_Language_tb_Stop" ManuallyRouted="false" />
+        <AssociationConnector Association="BigBusModel.FK_tb_Ticket_ExclusionWeekday_tb_Ticket" ManuallyRouted="false" />
+        <AssociationConnector Association="BigBusModel.FK_tb_TicketCost_tb_Ticket" ManuallyRouted="false" />
+        <AssociationConnector Association="BigBusModel.FK_tb_TicketCostVariation_tb_TicketCostVariation" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -11,6 +11,8 @@
     <AssemblyName>BigBus.DataServices</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -30,8 +32,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -39,9 +51,354 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgentCommissionReport_Result.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BigBusModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BigBusModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BigBusModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BigBusModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BigBusModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerAccountHistory_Result.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PromotionCodeReport_Result.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\Implementation\GenericDataRepository.cs" />
+    <Compile Include="Repositories\Infrastructure\IGenericDataRepository.cs" />
+    <Compile Include="Split_Result.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_Email_GetEmailsToSend_Result.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_Reports_Orders_FixedAndOpenDate_Result.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_Reports_Orders_FixedDate_Result.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_Reports_Orders_OpenDate_Result.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_Route_Stops_GetUnassignedStops_Result.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_AccountManager.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_AccountManager_MicroSite.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_AdminLog.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_AdminSession.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_AdminUser.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_AgentCashSale.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_AgentCommission.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_AgentOrder.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_AgentOrderError.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_AgentProfile.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_Barcode.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_Basket.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_BasketLine.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_Basket_Promotion.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_Company.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_ContactData.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_Country.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_Currency.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_CustomPage.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_CustomPage_Language.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_DiallingCode.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_Download.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_DownloadFolder.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_DownloadMetaData.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_Email.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_ExternalOrder_Barcode.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_GalleryImage.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_GoogleCode.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_GroupBooking.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_GroupBooking_Stop.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_GroupBooking_Time.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_HomePageData.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_HTMLMetaTag.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_Image.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_ImageFolder.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_ImageMetaData.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_Language.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_Log.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_MicroSite.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_MicroSite_Language.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_MultiTicket_Promotion.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_Navigation.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_NavigationItem.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_NavigationItem_Language.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_NewsItem.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_Newsletter.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_NewsletterComposite.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_NewsletterStaticSection.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_NewsletterText.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_NewsletterText_Language.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_Order.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_Orderline.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_OrderLine_GeneratedBarcode.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_PasswordAdminResetRequest.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_PasswordResetRequest.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_PaymentTransaction.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_Phrase.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_Phrase_Language.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_PlaceOfInterest.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_PlaceOfInterest_Language.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_PlaceOfInterest_Stop.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_Promotion.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_Promotion_DiscountedTicket.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_Route.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_Route_Language.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_Route_Stop.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_Session.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_SiteText.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_SiteText_Language.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_Stop.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_Stop_Language.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_Tag.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_ThingsToDoItem.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_Ticket.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_TicketApi.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_TicketCombination.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_TicketCost.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_TicketCostVariation.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_Ticket_ExclusionDate.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_Ticket_ExclusionWeekday.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_Ticket_Language.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_TourAnimationContent.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_Transaction_Address.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_Transaction_AddressPaypal.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_URLRewrite.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_User.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TourAttractionReportSpecificAttractionReport_Result.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TourAttractionReportSpecificTourTypeReport_Result.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TourAttractionReportTicketDateReport_Result.cs">
+      <DependentUpon>BigBusModel.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="BigBusModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BigBusModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="BigBusModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BigBusModel.edmx</DependentUpon>
+      <LastGenOutput>BigBusModel.Context.cs</LastGenOutput>
+    </None>
+    <None Include="BigBusModel.edmx.diagram">
+      <DependentUpon>BigBusModel.edmx</DependentUpon>
+    </None>
+    <None Include="BigBusModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BigBusModel.edmx</DependentUpon>
+      <LastGenOutput>BigBusModel.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

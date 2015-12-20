@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigBus.Common", "bigbus.com\BigBus.Common.csproj", "{C6718A30-F349-4936-81E3-AA75E073B22E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigBus.BusinessServices", "BigBus.BusinessServices\BigBus.BusinessServices.csproj", "{C655AB19-2FD0-4179-88F3-C0B7164DF402}"
@@ -26,6 +24,13 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigBus.BackOffice.Web", "BigBus.BackOffice.Web\BigBus.BackOffice.Web.csproj", "{511C7F24-45CE-4E0F-9027-F4524A357345}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigBus.Model", "BigBus.Model\BigBus.Model.csproj", "{DA75DAFE-8F1D-4481-819D-89CE21CF5963}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{71EB5CCB-693E-4633-94C3-9C9B9D597CFE}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
