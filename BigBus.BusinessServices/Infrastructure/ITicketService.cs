@@ -9,6 +9,6 @@ namespace BigBus.BusinessServices.Infrastructure
 {
     public interface ITicketService
     {
-        tb_Ticket GetTicket(Guid ticketId);
+        Ticket GetTicket(Guid ticketId);
     }
 }

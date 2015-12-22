@@ -12,14 +12,14 @@ namespace BigBus.BusinessServices.Implementation
 {
     public class TicketService: ITicketService
     {
-        private readonly IGenericDataRepository<tb_Ticket> _ticketRepos;
+        private readonly IGenericDataRepository<Ticket> _ticketRepos;
 
-        public TicketService(IGenericDataRepository<tb_Ticket> ticketRepository)
+        public TicketService(IGenericDataRepository<Ticket> ticketRepository)
         {
             _ticketRepos = ticketRepository;
         }
 
-        public tb_Ticket GetTicket(Guid ticketId)
+        public Ticket GetTicket(Guid ticketId)
         {
             return _ticketRepos.GetSingle(x => x.Id == ticketId);
         }

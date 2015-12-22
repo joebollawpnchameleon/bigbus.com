@@ -133,7 +133,7 @@
     <Compile Include="DataModel\tb_Stop_Language.cs" />
     <Compile Include="DataModel\tb_Tag.cs" />
     <Compile Include="DataModel\tb_ThingsToDoItem.cs" />
-    <Compile Include="DataModel\tb_Ticket.cs" />
+    <Compile Include="DataModel\Ticket.cs" />
     <Compile Include="DataModel\tb_TicketApi.cs" />
     <Compile Include="DataModel\tb_TicketCombination.cs" />
     <Compile Include="DataModel\tb_TicketCost.cs" />
@@ -144,8 +144,8 @@
     <Compile Include="DataModel\tb_TourAnimationContent.cs" />
     <Compile Include="DataModel\tb_Transaction_Address.cs" />
     <Compile Include="DataModel\tb_Transaction_AddressPaypal.cs" />
-    <Compile Include="DataModel\tb_URLRewrite.cs" />
-    <Compile Include="DataModel\tb_User.cs" />
+    <Compile Include="DataModel\URLRewrite.cs" />
+    <Compile Include="DataModel\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\Implementation\GenericDataRepository.cs" />
     <Compile Include="Repositories\Infrastructure\IGenericDataRepository.cs" />
