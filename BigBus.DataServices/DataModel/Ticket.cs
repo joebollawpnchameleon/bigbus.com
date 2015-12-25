@@ -13,7 +13,7 @@ namespace BigBus.DataServices.DataModel
             AgentCommission = new HashSet<AgentCommission>();
             PlaceOfInterest = new HashSet<PlaceOfInterest>();
             Route = new HashSet<Route>();
-            TicketExclusionWeekday = new HashSet<Ticket_ExclusionWeekday>();
+            TicketExclusionWeekday = new HashSet<TicketExclusionWeekday>();
             TicketCost = new HashSet<TicketCost>();
             TicketCostVariation = new HashSet<TicketCostVariation>();
         }
@@ -129,7 +129,7 @@ namespace BigBus.DataServices.DataModel
 
         public virtual ICollection<Route> Route { get; set; }
 
-        public virtual ICollection<Ticket_ExclusionWeekday> TicketExclusionWeekday { get; set; }
+        public virtual ICollection<TicketExclusionWeekday> TicketExclusionWeekday { get; set; }
 
         public virtual ICollection<TicketCost> TicketCost { get; set; }
 
