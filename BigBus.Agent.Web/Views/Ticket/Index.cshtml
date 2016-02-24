@@ -1,5 +1,16 @@
-﻿@{
+﻿@using BigBus.DataServices.DataModel
+
+@model IEnumerable<Ticket>
+
+@{
     ViewBag.Title = "Index";
 }
 
 <h2>Index</h2>
+
+Welcome,
+
+<p>
+     <a href="/Ticket/ListAllTickets" title="Get all tickets">Click here to get all tickets</a>
+</p>
+

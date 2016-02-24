@@ -9,7 +9,7 @@ using BigBus.DataServices;
 
 namespace BigBus.Agent.Web.Controllers
 {
-    public class TicketController : Controller
+    public class TicketController : BaseController
     {
         private readonly ITicketService _ticketService;
 
@@ -25,9 +25,18 @@ namespace BigBus.Agent.Web.Controllers
 
         public ActionResult GetTicket(string id)
         {
+            if (string.IsNullOrEmpty(id))
+            {
+                RedirectToAction("ListAllTickets");
+            }
             var ticket = _ticketService.GetTicket(new Guid(id));
 
             return View(ticket);
+        }
+
+        public ActionResult ListAllTickets()
+        {
+            return View("AllTickets", _ticketService.GetAllTickets());
         }
     }
 }

@@ -10,6 +10,8 @@ using BigBus.BusinessServices.Infrastructure;
 using BigBus.DataServices.DataModel;
 using BigBus.DataServices.Repositories.Infrastructure;
 using BigBus.DataServices.Repositories.Implementation;
+using BigBus.Authentication.Implementation;
+using BigBus.Authentication.Infrastructure;
 
 namespace BigBus.Agent.Web.Depencies
 {
@@ -27,7 +29,10 @@ namespace BigBus.Agent.Web.Depencies
             //                 As<IDbContext>().InstancePerRequest();
 
             builder.RegisterType<TicketService>().As<ITicketService>().InstancePerRequest();
+            builder.RegisterType<UserService>().As<IUserService>().InstancePerRequest();
+            builder.RegisterType<OckAuthService>().As<IOAuthService>().InstancePerRequest();
             builder.RegisterType<GenericDataRepository<Ticket>>().As<IGenericDataRepository<Ticket>>().InstancePerRequest();
+            builder.RegisterType<GenericDataRepository<User>>().As<IGenericDataRepository<User>>().InstancePerRequest();
 
             //builder.RegisterType<UnitOfWork>().As<IUnitOfWork>().InstancePerRequest();
 

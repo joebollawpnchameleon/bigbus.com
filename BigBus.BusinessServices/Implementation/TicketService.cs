@@ -23,5 +23,10 @@ namespace BigBus.BusinessServices.Implementation
         {
             return _ticketRepos.GetSingle(x => x.Id == ticketId);
         }
+
+        public IEnumerable<Ticket> GetAllTickets()
+        {
+            return _ticketRepos.GetAll();
+        }
     }
 }
