@@ -42,9 +42,9 @@ namespace BigBus.Authentication.Implementation
             get { return ReadEncryptedCookie<Guid>(CkNameUserId); }
         }
 
-        public Guid MicrositeId
+        public string MicrositeId
         {
-            get { return ReadEncryptedCookie<Guid>(CkNameCompanyId); }
+            get { return ReadEncryptedCookie<string>(CkNameCompanyId); }
         }
 
         public string AgentRef
@@ -175,7 +175,9 @@ namespace BigBus.Authentication.Implementation
             {
                 var lstProfiles = !string.IsNullOrEmpty(UserProfiles)? 
                     (UserProfiles.Split(',').Select(s => s)).ToList() : new List<string>();
-                var lstRoles = UserRoles.Split(',').Select(s => s).ToList();
+
+                var lstRoles = !string.IsNullOrEmpty(UserRoles)?
+                    UserRoles.Split(',').Select(s => s).ToList() : new List<string>();
 
                 return new ClientUser
                     {
@@ -200,8 +202,11 @@ namespace BigBus.Authentication.Implementation
         {
             try
             {
-                var sProfiles = String.Join(",", user.Profiles.Select(x => x).ToArray());
-                var sRoles = String.Join(",", user.Roles.Select(x => x).ToArray());
+                var sProfiles = (user.Profiles != null && user.Profiles.Count > 0) ?
+                    string.Join(",", user.Profiles.Select(x => x).ToArray()) : string.Empty;
+
+                var sRoles = (user.Roles != null && user.Roles.Count > 0)?
+                    string.Join(",", user.Roles.Select(x => x).ToArray()) : string.Empty;
 
                 PlaceClientEncryptedCookie(CkNameUserId, user.Id.ToString(), _cookieDurationInMins);
                 PlaceClientEncryptedCookie(CkNameEmail, user.Email, _cookieDurationInMins);

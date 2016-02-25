@@ -14,7 +14,7 @@ namespace BigBus.Authentication.Model
 
         public string FullName { get; set; }
 
-        public Guid MicrositeId { get; set; }
+        public string MicrositeId { get; set; }
 
         public string Email { get; set; }
 
@@ -22,7 +22,7 @@ namespace BigBus.Authentication.Model
 
         public bool IsInRole(Model.Roles[] requiredroles)
         {
-            return requiredroles.All(rrole => this.Roles.Contains(((int)rrole).ToString()));
+            return requiredroles.All(rrole => this.Roles.Contains(rrole.ToString()));
         }
 
         public bool HasRole(int roleid)

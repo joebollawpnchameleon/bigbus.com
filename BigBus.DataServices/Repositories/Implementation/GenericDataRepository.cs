@@ -63,7 +63,7 @@ namespace BigBus.DataServices.Repositories.Implementation
                     dbQuery = dbQuery.Include<T, object>(navigationProperty);
 
                 item = dbQuery
-                    .AsNoTracking() //Don't track any changes for the selected item
+                    //.AsNoTracking() //Don't track any changes for the selected item
                     .FirstOrDefault(where); //Apply where clause
             }
             return item;

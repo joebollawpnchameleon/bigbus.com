@@ -43,7 +43,7 @@ namespace BigBus.Agent.Web.Controllers
 
             //check that this user is agent and that is valid
             var user = _userService.FindUserForLogin(userdetails.UserName.Trim(), userdetails.Password);
-
+                        
            
             if (user != null && user.IsAgent)
             {
@@ -52,7 +52,7 @@ namespace BigBus.Agent.Web.Controllers
                     FullName = user.Firstname + " " + user.Lastname,
                     Id = user.Id,
                     Roles = new System.Collections.Generic.List<string> { Roles.Agent.ToString() },
-                    MicrositeId = new Guid(user.MicroSiteId),
+                    MicrositeId = user.MicroSiteId,
                     Email = user.FriendlyEmail,
                     AgentRef = user.AgentProfileId
                 };
