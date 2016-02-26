@@ -173,6 +173,11 @@ namespace BigBus.Authentication.Implementation
         {
             try
             {
+                if(UserId == null || UserId == Guid.Empty || string.IsNullOrEmpty(UserRoles))
+                {
+                    return null;
+                }
+
                 var lstProfiles = !string.IsNullOrEmpty(UserProfiles)? 
                     (UserProfiles.Split(',').Select(s => s)).ToList() : new List<string>();
 
