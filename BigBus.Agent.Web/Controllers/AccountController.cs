@@ -105,35 +105,38 @@ namespace BigBus.Agent.Web.Controllers
                 return View("Login", newLogin);
             }
            
-            if (agentUser.AgentProfile.Enabled)
-            {
-                if (BasePage.CurrentMicroSite.IsActiveAgentTandC && (!(agent.IsAgentTandCAccepted)))
-                {
-                    // first time agent? show check box
-                    // isAgentTandC.Visible = true;
-                    // isAgentTandCCheck.Text = BasePage.GetTranslation("agentTermsAndConditionURLText");
+            //check if microsite requires terms and conditions acceptance and check if agent has accepted terms, 
+            //redirect accordingly either to home page or terms page.
 
-                    Result = true;
-                    //LoginThisUser.IsAgentTandCAccepted = true;
-                    Session ThisSession = BasePage.GetSession() as Session;
-                    //  isAgentTandC.Visible = false;
-                    ObjectFactory ObjFactory = BasePage.GetObjectFactory();
+            //if (agentUser.AgentProfile.Enabled)
+            //{
+            //    if (BasePage.CurrentMicroSite.IsActiveAgentTandC && (!(agent.IsAgentTandCAccepted)))
+            //    {
+            //        // first time agent? show check box
+            //        // isAgentTandC.Visible = true;
+            //        // isAgentTandCCheck.Text = BasePage.GetTranslation("agentTermsAndConditionURLText");
 
-                    ThisSession.AssociateWithUser(LoginThisUser);
+            //        Result = true;
+            //        //LoginThisUser.IsAgentTandCAccepted = true;
+            //        Session ThisSession = BasePage.GetSession() as Session;
+            //        //  isAgentTandC.Visible = false;
+            //        ObjectFactory ObjFactory = BasePage.GetObjectFactory();
 
-                }
-                else
-                {
+            //        ThisSession.AssociateWithUser(LoginThisUser);
 
-                    Result = true;
-                    //LoginThisUser.IsAgentTandCAccepted = true;
-                    Session ThisSession = BasePage.GetSession() as Session;
-                    //  isAgentTandC.Visible = false;
-                    ObjectFactory ObjFactory = BasePage.GetObjectFactory();
+            //    }
+            //    else
+            //    {
 
-                    ThisSession.AssociateWithUser(LoginThisUser);
-                }
-            }
+            //        Result = true;
+            //        //LoginThisUser.IsAgentTandCAccepted = true;
+            //        Session ThisSession = BasePage.GetSession() as Session;
+            //        //  isAgentTandC.Visible = false;
+            //        ObjectFactory ObjFactory = BasePage.GetObjectFactory();
+
+            //        ThisSession.AssociateWithUser(LoginThisUser);
+            //    }
+            //}
             
         }
     }
