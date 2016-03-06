@@ -1,11 +1,11 @@
 ﻿
 using System.Web.Mvc;
-using BigBus.Authentication.Implementation;
 using BigBus.Authentication.Model;
+using C = BigBus.Common.Constants;
 
 namespace BigBus.Agent.Web.Controllers
 {
-    [CustomAuth( Roles.Agent, "agent.bigbustours.com","BB_",30)]
+    [CustomAuth(Roles.Agent, C.Web.CookieDomainAgent  , C.Web.CookiePrefixAgent,C.Web.CookieDuration)]
     public class BaseController : Controller
     {
     }

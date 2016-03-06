@@ -175,6 +175,10 @@
       <Project>{c655ab19-2fd0-4179-88f3-c0b7164df402}</Project>
       <Name>BigBus.BusinessServices</Name>
     </ProjectReference>
+    <ProjectReference Include="..\bigbus.com\BigBus.Common.csproj">
+      <Project>{c6718a30-f349-4936-81e3-aa75e073b22e}</Project>
+      <Name>BigBus.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BigBus.DataServices\BigBus.Data.csproj">
       <Project>{89d09ec7-bb9f-450f-b9ea-ab02140c49aa}</Project>
       <Name>BigBus.Data</Name>

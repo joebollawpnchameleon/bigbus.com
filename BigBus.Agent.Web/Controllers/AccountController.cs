@@ -13,13 +13,15 @@ namespace BigBus.Agent.Web.Controllers
     {
         private readonly IUserService _userService;
         private readonly IOAuthService _authService;
+        private readonly ITranslationService _translationService;
 
         private static readonly ILog Log = LogManager.GetLogger(typeof(AccountController));
 
-        public AccountController(IUserService userService, IOAuthService authService)
+        public AccountController(IUserService userService, IOAuthService authService, ITranslationService translationService)
         {
             _userService = userService;
             _authService = authService;
+            _translationService = translationService;
         }
 
         public ActionResult Index()
@@ -76,6 +78,63 @@ namespace BigBus.Agent.Web.Controllers
                 ModelState.AddModelError("LoginFailed", "Agent failed to login");
                 return View("Login");
             }
+        }
+
+        public ActionResult LoginAgent(LoginMV agent)
+        {
+            var newLogin = new LoginMV
+            {
+                ReferringUrl = (Request.UrlReferrer != null) ? Request.UrlReferrer.AbsoluteUri : ""
+            };
+
+            if (!ModelState.IsValid)
+            {
+                return View("Login", newLogin);
+            }
+
+            var agentUser = _userService.LoginAgentUser(agent.UserName, agent.Password);
+
+            if(agentUser == null)
+            {
+                ModelState.AddModelError("LoginFailed", _translationService.TranslateTerm("LoginFailed"));                
+                return View("Login", newLogin);
+            }
+            else if (!agentUser.AgentProfile.Enabled)
+            {
+                ModelState.AddModelError("LoginFailed", _translationService.TranslateTerm("AgentLoginDisabled"));
+                return View("Login", newLogin);
+            }
+           
+            if (agentUser.AgentProfile.Enabled)
+            {
+                if (BasePage.CurrentMicroSite.IsActiveAgentTandC && (!(agent.IsAgentTandCAccepted)))
+                {
+                    // first time agent? show check box
+                    // isAgentTandC.Visible = true;
+                    // isAgentTandCCheck.Text = BasePage.GetTranslation("agentTermsAndConditionURLText");
+
+                    Result = true;
+                    //LoginThisUser.IsAgentTandCAccepted = true;
+                    Session ThisSession = BasePage.GetSession() as Session;
+                    //  isAgentTandC.Visible = false;
+                    ObjectFactory ObjFactory = BasePage.GetObjectFactory();
+
+                    ThisSession.AssociateWithUser(LoginThisUser);
+
+                }
+                else
+                {
+
+                    Result = true;
+                    //LoginThisUser.IsAgentTandCAccepted = true;
+                    Session ThisSession = BasePage.GetSession() as Session;
+                    //  isAgentTandC.Visible = false;
+                    ObjectFactory ObjFactory = BasePage.GetObjectFactory();
+
+                    ThisSession.AssociateWithUser(LoginThisUser);
+                }
+            }
+            
         }
     }
 }

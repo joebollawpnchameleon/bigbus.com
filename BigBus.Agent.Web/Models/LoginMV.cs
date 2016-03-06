@@ -11,5 +11,6 @@ namespace BigBus.Agent.Web.Models
         public string Password { get; set; }
         public int UserType { get; set; }
         public string ReferringUrl { get; set; }
+        public string LoginErrorMessage { get; set; }
     }
 }
